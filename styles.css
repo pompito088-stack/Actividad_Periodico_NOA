@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #8A2BE2;
+    color: #222;
+}
+
+.site-header {
+    text-align: center;
+    padding: 60px 25px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./imgs/bernabeu2.avif');
+    background-size: 95rem 45rem;
+    background-position: center;
+    color: white;
+}
+
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.site-tagline {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.main-nav {
+    background: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    border: 4px solid  #D4AF37;
+}
+
+.nav-logo {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.main-nav li {
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    font-size: 1.1rem;
+}
+
+.main-nav li:hover {
+    background:  #D4AF37;
+    color: #ffffff;
+}
+
+/*
+
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 25px;
+    padding: 25px;
+}
+
+
+.ads-left, .ads-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 110px;
+    align-self: start;
+}
+
+.ad-card {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.ad-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+
+.news-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-news {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.main-news img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.news-card {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.news-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.author {
+    color: gray;
+    font-size: 14px;
+}
+
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1000px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ads-left, .ads-right {
+        position: static;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}*/
