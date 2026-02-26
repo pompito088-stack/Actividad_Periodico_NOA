@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Campos en Formularios HTML</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <form class="form-tipos-inputs">
+        <h1 class="title">Dejanos tu opinión</h1>
+        <!-- Ejemplo representativo para cada tipo de input -->
+        <div class="input-demo">
+            <label for="text">Nombre completo</label>
+            <input type="text" id="text" name="text" placeholder="Ej: Juan Pérez">            
+        </div>
+        <div class="input-demo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            
+        </div>
+        <div class="input-demo">
+            <label for="password">Contraseña de acceso</label>
+            <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres">
+        </div>               
+        
+        <div class="input-demo">
+            <label>Nivel de satisfacción</label>
+
+            <div class="rating">
+                <input value="5" name="rating" id="star5" type="radio" />
+                <label for="star5">
+                    <svg viewBox="0 0 24 24" class="svgOne">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="svgTwo">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <div class="ombre"></div>
+                </label>
+
+                <input value="4" name="rating" id="star4" type="radio" />
+                <label for="star4">
+                    <svg viewBox="0 0 24 24" class="svgOne">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="svgTwo">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <div class="ombre"></div>
+                </label>
+
+                <input value="3" name="rating" id="star3" type="radio" />
+                <label for="star3">
+                    <svg viewBox="0 0 24 24" class="svgOne">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="svgTwo">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <div class="ombre"></div>
+                </label>
+
+                <input value="2" name="rating" id="star2" type="radio" />
+                <label for="star2">
+                    <svg viewBox="0 0 24 24" class="svgOne">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="svgTwo">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <div class="ombre"></div>
+                </label>
+
+                <input value="1" name="rating" id="star1" type="radio" />
+                <label for="star1">
+                    <svg viewBox="0 0 24 24" class="svgOne">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="svgTwo">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <div class="ombre"></div>
+                </label>
+            </div>
+        </div>
+        
+        <div class="input-demo full-width">
+            <label for="textarea">Comentarios</label>
+            <textarea id="textarea" name="textarea" placeholder="Escribe tus comentarios aquí..."></textarea>           
+        </div>
+        <input type="submit" value="Enviar">
+
+<button type="reset" class="button">
+    <span class="button__text">Eliminar</span>
+    <span class="button__icon">
+        <svg class="svg" viewBox="0 0 512 512">
+                <path d="M112,112l20,320c.95,18.49,14.4,32,32,32H348c17.67,0,30.87-13.51,32-32l20-320" 
+                fill="none" stroke="#fff" stroke-width="32"></path>
+
+                <line x1="80" x2="432" y1="112" y2="112" 
+                stroke="#fff" stroke-width="32"></line>
+
+                <path d="M192,112V72a24,24,0,0,1,24-24h80a24,24,0,0,1,24,24v40" 
+                fill="none" stroke="#fff" stroke-width="32"></path>
+
+                <line x1="256" y1="176" x2="256" y2="400" stroke="#fff" stroke-width="32"></line>
+                <line x1="184" y1="176" x2="192" y2="400" stroke="#fff" stroke-width="32"></line>
+                <line x1="328" y1="176" x2="320" y2="400" stroke="#fff" stroke-width="32"></line>
+            </svg>
+    </span>
+</button>
+
+<a href="../index.html" class="volver">Volver al inicio</a>
+</body>
+</html>
