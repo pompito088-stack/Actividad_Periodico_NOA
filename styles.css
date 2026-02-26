@@ -5,10 +5,11 @@
 }
 
 body {
-    background: #8A2BE2;
+    background: #2d87a5;
     color: #222;
 }
 
+/* HEADER (igual que el tuyo) */
 .site-header {
     text-align: center;
     padding: 60px 25px;
@@ -32,6 +33,12 @@ body {
     font-size: 1.5rem;
 }
 
+/* NAV (igual que el tuyo) */
+.nav-toggle,
+.nav-toggle-label {
+    display: none;
+}
+
 .main-nav {
     background: #ffffff; 
     display: flex;
@@ -53,6 +60,7 @@ body {
     justify-content: center;
     list-style: none;
 }
+
 .main-nav li {
     color: rgb(0, 0, 0);
     padding: 15px 20px;
@@ -64,9 +72,7 @@ body {
     color: #ffffff;
 }
 
-/*
-
-
+/* LAYOUT */
 .layout {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -74,40 +80,64 @@ body {
     padding: 25px;
 }
 
-
-.ads-left, .ads-right {
+/* PUBLICIDAD STICKY (FIX REAL) */
+.ads-left {
+    grid-column: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     position: sticky;
-    top: 110px;
-    align-self: start;
+    top: 20px; /* como el nav no es sticky, solo margen */
+
+    align-self: start; /* CLAVE */
+    height: fit-content; /* CLAVE */
 }
 
+.ads-right {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    position: sticky;
+    top: 20px;
+
+    align-self: start;
+    height: fit-content;
+}
+
+/* TARJETAS PUBLICIDAD */
 .ad-card {
     background: white;
-    padding: 15px;
+    padding: 12px;
     border-radius: 6px;
     text-align: center;
 }
 
 .ad-card img {
-    width: 100%;
+    width: auto;
+    height: auto; /* evita que se alarguen */
+    max-width: 100%;
+    min-width: none;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-
+/* NOTICIAS */
 .news-area {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* NOTICIA PRINCIPAL */
 .main-news {
     background: white;
     padding: 20px;
     border-radius: 6px;
+    margin-bottom: 20px;
 }
 
 .main-news img {
@@ -116,56 +146,229 @@ body {
     margin-bottom: 10px;
 }
 
+/* GRID NOTICIAS SECUNDARIAS (más compactas) */
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* TARJETAS NOTICIAS */
 .news-card {
     background: white;
-    padding: 15px;
+    padding: 12px;
     border-radius: 6px;
 }
 
 .news-card img {
-    width: 100%;
+    width: auto;
+    height: auto; /* evita que se alarguen */
+    max-width: 100%;
+    min-width: none;
     border-radius: 6px;
     margin-bottom: 8px;
 }
 
-.author {
-    color: gray;
-    font-size: 14px;
+.news-card h1 {
+    font-size: 1rem;
 }
 
+.news-card h2 {
+    font-size: 0.85rem;
+    color: gray;
+}
 
+.author {
+    color: gray;
+    font-size: 0.875rem;
+}
+
+/* FOOTER */
 .site-footer {
     text-align: center;
     padding: 20px;
     background: #111;
     color: white;
     margin-top: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
 }
 
-
+/* RESPONSIVE */
+/* ===================== */
+/* TABLET (<=1000px) */
+/* ===================== */
 @media (max-width: 1000px) {
+
+    .layout {
+        display: grid;
+        grid-template-columns: 1fr; /* todo en una columna */
+        grid-template-areas:
+            "ads-left"
+            "news"
+            "ads-right";
+        gap: 20px;
+    }
+
+    /* Publicidad izquierda: dos tarjetas lado a lado */
+    .ads-left {
+        grid-area: ads-left;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* dos tarjetas en una fila */
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Noticias en medio */
+    .news-area {
+        grid-area: news;
+        display: block;
+    }
+
+    /* Publicidad derecha: dos tarjetas lado a lado */
+    .ads-right {
+        grid-area: ads-right;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* dos tarjetas en una fila */
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Tarjetas de publicidad */
+    .ad-card {
+        width: 100%;
+    }
+
+    .ad-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    /* Noticias secundarias: 2 por fila */
     .news-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
-
+/* ===================== */
+/* MÓVIL (<=600px) */
+/* ===================== */
 @media (max-width: 600px) {
+    .nav-logo{
+        display: none;
+    }
+.main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    /* 👉 ocultamos menú SIEMPRE en móvil */
+    .main-nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(0,0,0,0.8);
+        border-radius: 6px;
+        z-index: 10;
+    }
+
+    /* estilo items */
+    .main-nav ul li {
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .main-nav ul li:hover {
+        background: #D4AF37;
+        color: black;
+    }
+
+    /* 👉 mostrar al clicar la imagen */
+    .nav-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    /* 👉 ocultamos el checkbox (pero funciona) */
+    .nav-toggle {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* 👉 mostramos la imagen del menú */
+    .main-nav label {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* 👉 opcional: tamaño de la imagen */
+    .main-nav label img {
+        height: 40px;
+    }
     .layout {
+        display: grid;
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "ads-left"
+            "news"
+            "ads-right";
+        gap: 15px;
     }
 
-    .ads-left, .ads-right {
+    /* Publicidad izquierda: dos tarjetas lado a lado */
+    .ads-left {
+        grid-area: ads-left;
         position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
     }
 
-    .news-grid {
-        grid-template-columns: 1fr;
+    /* Noticias */
+    .news-area {
+        grid-area: news;
+        display: block;
     }
-}*/
+
+    /* Publicidad derecha: dos tarjetas lado a lado */
+    .ads-right {
+        grid-area: ads-right;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Tarjetas de publicidad */
+    .ad-card {
+        width: 100%;
+    }
+
+    .ad-card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    /* Noticias secundarias: 1 por fila */
+    .news-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

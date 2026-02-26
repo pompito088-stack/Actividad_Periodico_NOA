@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,240 +8,146 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1 class="site-title">El Rincón Madridista</h1>
-        <p class="site-tagline">Últimas noticias del Real Madrid</p>
-    </header>
-    <!--Menú de navegación-->
-    <nav class="main-nav">
-        <img class="nav-logo" src="./imgs/escudo.webp" alt="Escudo Real Madrid">
+
+<header class="site-header">
+    <h1 class="site-title">El Rincón Madridista</h1>
+    <p class="site-tagline">Últimas noticias del Real Madrid</p>
+</header>
+
+<nav class="main-nav">
+    <img class="nav-logo" src="./imgs/escudo.webp" alt="Escudo Real Madrid">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+        <img src="./imgs/escudo.webp" alt="Escudo Real Madrid">
+    </label>
         <ul class="nav-list">
-            <li class="nav-item">LaLiga EA Sports</li>
-            <li class="nav-item">Champions League</li>
-            <li class="nav-item">Copa del Rey</li>
-            <li class="nav-item">Fichajes</li>
-            <li class="nav-item">Última hora</li>
+            <li>LaLiga EA Sports</li>
+            <li>Champions League</li>
+            <li>Copa del Rey</li>
+            <li>Fichajes</li>
+            <li>Última hora</li>
         </ul>
-    </nav>
-    <main class="layout">
-        <!-- Publicidad derecha -->
-        <aside class="ads-right ad-card">
-            <h2 class="ad-title">Publicidad</h2>
-            <blockquote class="ad-block">
-                <img class="ad-image" src="./imgs/nestea.jpeg" alt="Anuncio">
-                <p class="ad-text">
-                    Disfruta del sabor refrescante de Nestea, la bebida perfecta para 
-                    cualquier momento del día. ¡Pruébala hoy y siente la diferencia!
-                </p>
-            </blockquote>
-        </aside>
-        <aside class="ads-right ad-card">
-            <blockquote class="ad-block">
-                <img class="ad-image" src="./imgs/taza-nescafe-publicidad.jpg" alt="Anuncio">
-                <p class="ad-text">
-                    Comienza tu día con una taza de Nescafé. El sabor inconfundible 
-                    del café que te despierta y te acompaña en cada momento. ¡Nescafé, 
-                    el café que te entiende!
-                </p>
-            </blockquote>
-        </aside>
+</nav>
 
-        <!--Inicio noticia principal-->
-        <section class="main-news">
-            <article class="news-article">
-                <header class="article-header">
-                    <hgroup class="article-titles">
-                        <h1 class="article-title">EL Real Madrid vence al Alavés y se acerca al liderato</h1>
-                        <h2 class="article-subtitle">Mbappé y Rodrygo marcaron en la victoria 2-1 en Mendizorroza</h2>
-                    </hgroup>
-                    <p class="publish-date">Publicado: 14/12/2025</p>
-                </header>
-                <figure class="article-figure">
-                    <img class="article-image" src="./imgs/Madrid_vs_Alaves.webp" alt="Jugadores del Real Madrid celebrando un gol">
-                    <figcaption class="figure-caption">Los jugadores celebran el gol de la victoria</figcaption>
-                </figure>
-                <p class="article-text">
-                    El Real Madrid consiguió tres puntos vitales frente al
-                    Deportivo Alavés en la jornada 16 de LaLiga EA Sports.
-                    Kylian Mbappé abrió el marcador en el primer tiempo,
-                    pero Carlos Vicente empató para los locales en
-                    el minuto 68. Finalmente, Rodrygo anotó el gol decisivo
-                    en el 76’, asegurando la victoria blanca. 
-                    Con este resultado, el equipo de Xabi Alonso se coloca a 
-                    solo cuatro puntos del FC Barcelona en la tabla.
-                </p>
-                <footer class="article-footer">
-                    <p class="comments">Comentarios (16)</p>
-                </footer>
-            </article>
-        </section>
-        <!--Fin noticia principal-->
+<main class="layout">
 
-        <!--Inicio de las noticias secundarias-->
+    <!-- Publicidad izquierda -->
+    <aside class="ads-left" aria-label="Publicidad">
+        <article class="ad-card">
+            <blockquote>
+                <img src="./imgs/nestea.jpeg" alt="Anuncio Nestea">
+                <p>Disfruta del sabor refrescante de Nestea.</p>
+            </blockquote>
+        </article>
+
+        <article class="ad-card">
+            <blockquote>
+                <img src="./imgs/red-bull-publicidad.avif" alt="Anuncio Red Bull">
+                <p>Red Bull te da alas.</p>
+            </blockquote>
+        </article>
+    </aside>
+
+    <!-- Noticias -->
+    <section class="news-area">
+
+        <!-- Noticia principal -->
+        <article class="main-news">
+            <figure>
+                <img src="./imgs/Madrid_vs_Alaves.webp" alt="Jugadores celebrando">
+                <figcaption>LaLiga EA Sports</figcaption>
+            </figure>
+            <header>
+                <h1>El Real Madrid vence al Alavés y se acerca al liderato</h1>
+                <h2>Mbappé y Rodrygo marcaron en la victoria 2-1</h2>
+                <p>Por <cite>Carlos Fernández</cite></p>
+                <p class="publish-date">Publicado: <time datetime="2025-12-14">14/12/2025</time></p>
+            </header>
+        </article>
+
+        <!-- Noticias secundarias -->
         <section class="news-grid">
-            <!--Inicio noticia secundaria 1-->
-            <article class="news-card">
-                <header class="article-header">
-                    <hgroup class="article-titles">
-                        <h1 class="article-title">El Manchester City sorprende al Real Madrid en el Bernabéu</h1>
-                        <h2 class="article-subtitle">Los ingleses remontaron y ganaron 2-1 en la sexta jornada de Champions</h2>
-                    </hgroup>
-                    <p class="publish-date">Publicado: 10/12/2025</p>
-                </header>
-                <figure class="article-figure">
-                    <img class="article-image" src="./imgs/Madrid vs City.jpeg" alt="Bellingham lamentándose de la derrota al acaabar el partido">
-                    <figcaption class="figure-caption">Bellingham lamenta la derrota tras el pitido final</figcaption>
-                </figure>
-                <p class="article-text">
-                    El Real Madrid cayó en casa frente al Manchester City en la última jornada
-                    de la fase de liga de la Champions League. Rodrygo adelantó a los blancos
-                    en el minuto 27, pero Nico O’Reilly y Erling Haaland dieron la vuelta al
-                    marcador antes del descanso. A pesar de la presión en la segunda parte, 
-                    el equipo de Xabi Alonso no logró empatar y terminó con una derrota que 
-                    complica su clasificación directa.
-                </p>
-                <footer class="article-footer">
-                    <p class="comments">Comentarios (8)</p>
-                </footer>
-            </article>
-            <!--Fin noticia secundaria 1-->  
-            
-            <!--Inicio noticia secundaria 2-->
-            <article class="news-card">
-                <header>
-                    <hgroup>
-                        <h1 class="article-title">El Real Madrid debutará en Copa contra el Talavera</h1>
-                        <h2 class="article-subtitle">El partido se jugará el 17 de diciembre en El Prado, dieciseisavos de final</h2>
-                    </hgroup>
-                    <p class="publish-date">Publicado: 16/12/2025</p>
-                </header>
-                <figure class="article-figure">
-                    <img class="article-image" src="./imgs/Madrid vs Talavera.jpeg" alt="Real Madrid vs Talavera de la Reina">
-                    <figcaption class="figure-caption">Real Madrid vs Talavera de la Reina</figcaption>
-                </figure>
-                <p class="article-text">
-                    El Real Madrid afronta su estreno en la Copa del Rey 2025-26 contra el 
-                    Talavera de la Reina. El encuentro se disputará en el estadio El Prado 
-                    el miércoles 17 de diciembre. Será la primera vez que ambos equipos se
-                    enfrenten en esta competición. El conjunto blanco llega con la obligación 
-                    de avanzar en el torneo y mantener vivas sus opciones de conquistar un 
-                    título que no gana desde 2023.
-                </p>
-                <footer class="article-footer">
-                    <p class="comments">Comentarios (24)</p>
-                </footer>
-            </article>
-            <!--Fin noticia secundaria 2-->
 
-            <!--Inicio noticia secundaria 3-->
             <article class="news-card">
-                <header>
-                    <hgroup>
-                        <h1 class="article-title">Nico Paz, prioridad para el Real Madrid en 2026</h1>
-                        <h2 class="article-subtitle">El club blanco planea activar su cláusula de recompra tras su gran temporada en Italia</h2>
-                    </hgroup>
-                    <p class="publish-date">Publicado: 16/12/2025</p>
-                </header>
-                <figure class="article-figure">
-                    <img class="article-image" src="./imgs/Nico Paz.jpg" alt="Nico Paz con el Como de la Serie A">
-                    <figcaption class="figure-caption">Nico Paz con el Como de la Serie A</figcaption>
+                <figure>
+                    <img src="./imgs/madrid_city.jpeg" alt="Imagen de la noticia">
+                    <figcaption>Champions League</figcaption>
                 </figure>
-                <p class="article-text">
-                    Nico Paz, actualmente en el Como de la Serie A, se ha convertido en una de las 
-                    sensaciones del fútbol europeo. Con cinco goles y cinco asistencias, el mediapunta 
-                    argentino ha despertado el interés de la dirección deportiva del Real Madrid. Según 
-                    medios especializados, el club blanco activará la cláusula de recompra de 10 millones 
-                    de euros en junio de 2026. Su regreso supondría un refuerzo inmediato para el centro 
-                    del campo y podría afectar al rol de otros jóvenes como Arda Güler.
-                </p>
-                <footer class="article-footer">
-                    <p class="comments">Comentarios (30)</p>
-                </footer>
+                <header>
+                    <h3>El City sorprende al Madrid</h3>
+                    <h2></h2>
+                    <p>Por <cite>Tomas Roncero</cite></p>
+                    <p class="publish-date">Publicado: <time datetime="2025-12-10">10/12/2025</time></p>
+                </header>
             </article>
-            <!--Fin noticia secundaria 3-->
 
-            <!--Inicio noticia secundaria 4-->
             <article class="news-card">
-                <header>
-                    <hgroup>
-                        <h1 class="article-title">Florentino Pérez presidió la comida de Navidad con los medios</h1>
-                        <h2 class="article-subtitle">El presidente del Real Madrid destacó la unidad del club en estas fechas</h2>
-                    </hgroup>
-                    <p class="publish-date">Publicado: 15/12/2025</p>
-                </header>
-                <figure class="article-figure">
-                    <img class="article-image" src="./imgs/Florentino comida navidad.webp" alt="Florentino Pérez en la comida de Navidad">
-                    <figcaption class="figure-caption">Florentino Pérez en la comida de Navidad</figcaption>
+                <figure>
+                    <img src="./imgs/madrid-vs-talavera.webp" alt="Imagen de la noticia">
+                    <figcaption>Copa del Rey</figcaption>
                 </figure>
-                <p class="article-text">
-                    Florentino Pérez compartió un almuerzo navideño con periodistas deportivos 
-                    en la Ciudad Real Madrid. Durante el encuentro, el presidente subrayó la 
-                    importancia de la unión entre plantilla, cuerpo técnico y afición para afrontar 
-                    los retos de la temporada. También recordó los éxitos recientes y la ambición 
-                    de seguir compitiendo por todos los títulos.
-                </p>
-                <footer class="article-footer">
-                    <p class="comments">Comentarios (15)</p>
-                </footer>
+                <header>
+                    <h3>Debut en Copa ante el Talavera</h3>
+                    <h2></h2>
+                    <p>Por <cite>Pedro Benito</cite></p>
+                    <p class="publish-date">Publicado: <time datetime="2025-12-16">16/12/2025</time></p>
+                </header>
+                <footer><p>Comentarios (24)</p></footer>
             </article>
-            <!--Fin noticia secundaria 4-->
 
-            <!--Inicio noticia secundaria 5-->
             <article class="news-card">
-                <header>
-                    <hgroup>
-                        <h1 class="article-title">El Comité Técnico de Árbitros no admite penalti a Vinícius</h1>
-                        <h2 class="article-subtitle">El brasileño reclamó una falta en el área ante el Alavés que no fue señalada</h2>
-                    </hgroup>
-                    <p class="publish-date">Publicado: 16/12/2025</p>
-                </header>
-                <figure class="article-figure">
-                    <img class="article-image" src="./imgs/Vinicius penalti.webp" alt="Posible penalti para el Real Madrid">
-                    <figcaption class="figure-caption">Posible penalti para el Real Madrid</figcaption>
+                <figure>
+                    <img src="./imgs/Nico Paz.jpg" alt="Imagen de la noticia">
+                    <figcaption>Fichajes</figcaption>
                 </figure>
-                <p class="article-text">
-                    El Real Madrid volvió a verse envuelto en polémica arbitral tras el partido contra 
-                    el Alavés. Vinícius Jr. reclamó un penalti por un golpe dentro del área, pero el 
-                    árbitro González Fuertes no lo señaló. El Comité Técnico de Árbitros respaldó la 
-                    decisión, alegando “falta de intensidad” en la acción. La situación ha generado 
-                    debate en la prensa y en la afición blanca.
-                </p>
-                <footer class="article-footer">
-                    <p class="comments">Comentarios (20)</p>
-                </footer>
+                <header>
+                    <h3>Nico Paz, prioridad en 2026</h3>
+                    <h2></h2>
+                    <p>Por <cite>Alba Ontiveros</cite></p>
+                    <p class="publish-date">Publicado: <time datetime="2025-12-16">16/12/2025</time></p>
+                </header>
             </article>
-            <!--Fin noticia secundaria 5-->
+
+            <article class="news-card">
+                <figure>
+                    <img src="./imgs/Florentino comida navidad.webp" alt="Imagen de la noticia">
+                    <figcaption>Última hora</figcaption>
+                </figure>
+                <header>
+                    <h3>Florentino y la comida navideña</h3>
+                    <h2></h2>
+                    <p>Por <cite>Cristina Martínez</cite></p>
+                    <p class="publish-date">Publicado: <time datetime="2025-12-15">15/12/2025</time></p>
+                </header>
+            </article>
 
         </section>
-        <!--Fin de las noticias secundarias-->
 
-        <!--Inicio publicidad-->
-        <aside class="ads-left ad-card">
-            <h2 class="ad-title">Publicidad</h2>
-            <blockquote class="ad-block">
-                <img class="ad-image" src="./imgs/nestea.jpeg" alt="Anuncio">
-                <p class="ad-text">
-                    Disfruta del sabor refrescante de Nestea, la bebida perfecta para 
-                    cualquier momento del día. ¡Pruébala hoy y siente la diferencia!
-                </p>
-            </blockquote>
-        </aside>
-        <aside class="ads-left ad-card">
-            <blockquote class="ad-block">
-                <img class="ad-image" src="./imgs/red-bull-publicidad.avif" alt="Anuncio">
-                <p class="ad-text">
-                    Red Bull te da alas. Mantente activo y lleno de energía con 
-                    nuestra bebida energética líder en el mercado. ¡Red Bull te impulsa a alcanzar tus metas!
-                </p>
-            </blockquote>
-        </aside>
-        
-        <!--Fin publicidad-->
+    </section>
 
-        <footer class="site-footer">
-            <p>&copy; 2025 El Rincón Madridista. Todos los derechos reservados.</p>
-        </footer>
-    </main>
+    <!-- Publicidad derecha -->
+    <aside class="ads-right" aria-label="Publicidad">
+        <article class="ad-card">
+            <blockquote>
+                <img src="./imgs/nestea.jpeg" alt="">
+                <p>Refresca tu día con Nestea</p>
+            </blockquote>
+        </article>
+
+        <article class="ad-card">
+            <blockquote>
+                <img src="./imgs/taza-nescafe-publicidad.jpg" alt="">
+                <p>Empieza el día con Nescafé</p>
+            </blockquote>
+        </article>
+
+    </aside>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2025 El Rincón Madridista</p>
+</footer>
 
 </body>
-</html> 
+</html>
