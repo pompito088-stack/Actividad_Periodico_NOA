@@ -1,152 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un periódico digital madridista">
-    <title>El Rincón Madridista</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Un periódico digital madridista">
+        <title>El Rincón Madridista</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
 
-<header class="site-header">
-    <h1 class="site-title">El Rincón Madridista</h1>
-    <p class="site-tagline">Últimas noticias del Real Madrid</p>
-</header>
+        <header class="site-header">
+            <h1 class="site-title">El Rincón Madridista</h1>
+            <p class="site-tagline">Últimas noticias del Real Madrid</p>    
+        </header>
 
-<nav class="main-nav">
-    <img class="nav-logo" src="./imgs/escudo.webp" alt="Escudo Real Madrid">
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">
-        <img src="./imgs/escudo.webp" alt="Escudo Real Madrid">
-    </label>
-        <ul class="nav-list">
-            <li>LaLiga EA Sports</li>
-            <li>Champions League</li>
-            <li>Copa del Rey</li>
-            <li>Fichajes</li>
-            <li>Última hora</li>
-        </ul>
-</nav>
+        <nav class="main-nav">
+            <img class="nav-logo" src="./imgs/escudo.webp" alt="Escudo Real Madrid">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <img src="./imgs/escudo.webp" alt="Escudo Real Madrid">
+            </label>
+            <ul class="nav-list">
+                <li>LaLiga EA Sports</li>
+                <li>Champions League</li>
+                <li>Copa del Rey</li>
+                <li>Fichajes</li>
+                <li>Última hora</li>
+            </ul>
+        </nav>
 
-<main class="layout">
+        <main class="layout">
+            <!-- Publicidad izquierda -->
+            <aside class="ads-left" aria-label="Publicidad">
+                <article class="ad-card">
+                    <blockquote>
+                        <img src="./imgs/nestea.jpeg" alt="Anuncio Nestea">
+                        <p>Disfruta del sabor refrescante de Nestea.</p>
+                    </blockquote>
+                </article>
 
-    <!-- Publicidad izquierda -->
-    <aside class="ads-left" aria-label="Publicidad">
-        <article class="ad-card">
-            <blockquote>
-                <img src="./imgs/nestea.jpeg" alt="Anuncio Nestea">
-                <p>Disfruta del sabor refrescante de Nestea.</p>
-            </blockquote>
-        </article>
+                <article class="ad-card">
+                    <blockquote>
+                        <img src="./imgs/red-bull-publicidad.avif" alt="Anuncio Red Bull">
+                        <p>Red Bull te da alas.</p>
+                    </blockquote>
+                </article>
+            </aside>
 
-        <article class="ad-card">
-            <blockquote>
-                <img src="./imgs/red-bull-publicidad.avif" alt="Anuncio Red Bull">
-                <p>Red Bull te da alas.</p>
-            </blockquote>
-        </article>
-    </aside>
+            <!-- Noticias -->
+            <section class="news-area">
+                <!-- Noticia principal -->
+                <article class="main-news">
+                    <figure>
+                        <img src="./imgs/Madrid_vs_Alaves.webp" alt="Jugadores celebrando">
+                        <figcaption>LaLiga EA Sports</figcaption>
+                    </figure>
+                    <header>
+                        <h1>El Real Madrid vence al Alavés y se acerca al liderato</h1>
+                        <h2>Mbappé y Rodrygo marcaron en la victoria 2-1</h2>
+                        <p>Por <cite>Carlos Fernández</cite></p>
+                        <p class="publish-date">Publicado: <time datetime="2025-12-14">14/12/2025</time></p>
+                    </header>
+                </article>
 
-    <!-- Noticias -->
-    <section class="news-area">
+                <!-- Noticias secundarias -->
+                <section class="news-grid">
 
-        <!-- Noticia principal -->
-        <article class="main-news">
-            <figure>
-                <img src="./imgs/Madrid_vs_Alaves.webp" alt="Jugadores celebrando">
-                <figcaption>LaLiga EA Sports</figcaption>
-            </figure>
-            <header>
-                <h1>El Real Madrid vence al Alavés y se acerca al liderato</h1>
-                <h2>Mbappé y Rodrygo marcaron en la victoria 2-1</h2>
-                <p>Por <cite>Carlos Fernández</cite></p>
-                <p class="publish-date">Publicado: <time datetime="2025-12-14">14/12/2025</time></p>
-            </header>
-        </article>
+                    <article class="news-card">
+                        <figure>
+                            <img src="./imgs/madrid_city.jpeg" alt="Imagen de la noticia">
+                            <figcaption>Champions League</figcaption>
+                        </figure>
+                        <header>
+                            <h3>El City sorprende al Madrid</h3>                        
+                            <p>Por <cite>Tomas Roncero</cite></p>
+                            <p class="publish-date">Publicado: <time datetime="2025-12-10">10/12/2025</time></p>
+                        </header>
+                    </article>
 
-        <!-- Noticias secundarias -->
-        <section class="news-grid">
+                    <article class="news-card">
+                        <figure>
+                            <img src="./imgs/madrid-vs-talavera.webp" alt="Imagen de la noticia">
+                        <figcaption>Copa del Rey</figcaption>
+                        </figure>
+                        <header>
+                            <h3>Debut en Copa ante el Talavera</h3>                        
+                            <p>Por <cite>Pedro Benito</cite></p>
+                            <p class="publish-date">Publicado: <time datetime="2025-12-16">16/12/2025</time></p>
+                        /header>
+                    </article>
 
-            <article class="news-card">
-                <figure>
-                    <img src="./imgs/madrid_city.jpeg" alt="Imagen de la noticia">
-                    <figcaption>Champions League</figcaption>
-                </figure>
-                <header>
-                    <h3>El City sorprende al Madrid</h3>
-                    <h2></h2>
-                    <p>Por <cite>Tomas Roncero</cite></p>
-                    <p class="publish-date">Publicado: <time datetime="2025-12-10">10/12/2025</time></p>
-                </header>
-            </article>
+                    <article class="news-card">
+                        <figure>
+                            <img src="./imgs/Nico Paz.jpg" alt="Imagen de la noticia">
+                            <figcaption>Fichajes</figcaption>
+                        </figure>
+                        <header>
+                            <h3>Nico Paz, prioridad en 2026</h3>
+                            <p>Por <cite>Alba Ontiveros</cite></p>
+                            <p class="publish-date">Publicado: <time datetime="2025-12-16">16/12/2025</time></p>
+                        </header>
+                    </article>
 
-            <article class="news-card">
-                <figure>
-                    <img src="./imgs/madrid-vs-talavera.webp" alt="Imagen de la noticia">
-                    <figcaption>Copa del Rey</figcaption>
-                </figure>
-                <header>
-                    <h3>Debut en Copa ante el Talavera</h3>
-                    <h2></h2>
-                    <p>Por <cite>Pedro Benito</cite></p>
-                    <p class="publish-date">Publicado: <time datetime="2025-12-16">16/12/2025</time></p>
-                </header>
-            </article>
+                    <article class="news-card">
+                        <figure>
+                            <img src="./imgs/Florentino comida navidad.webp" alt="Imagen de la noticia">
+                            <figcaption>Última hora</figcaption>
+                        </figure>
+                        <header>
+                            <h3>Florentino y la comida navideña</h3>
+                            <p>Por <cite>Cristina Martínez</cite></p>
+                            <p class="publish-date">Publicado: <time datetime="2025-12-15">15/12/2025</time></p>
+                        </header>
+                    </article>
 
-            <article class="news-card">
-                <figure>
-                    <img src="./imgs/Nico Paz.jpg" alt="Imagen de la noticia">
-                    <figcaption>Fichajes</figcaption>
-                </figure>
-                <header>
-                    <h3>Nico Paz, prioridad en 2026</h3>
-                    <h2></h2>
-                    <p>Por <cite>Alba Ontiveros</cite></p>
-                    <p class="publish-date">Publicado: <time datetime="2025-12-16">16/12/2025</time></p>
-                </header>
-            </article>
+                </section>
 
-            <article class="news-card">
-                <figure>
-                    <img src="./imgs/Florentino comida navidad.webp" alt="Imagen de la noticia">
-                    <figcaption>Última hora</figcaption>
-                </figure>
-                <header>
-                    <h3>Florentino y la comida navideña</h3>
-                    <h2></h2>
-                    <p>Por <cite>Cristina Martínez</cite></p>
-                    <p class="publish-date">Publicado: <time datetime="2025-12-15">15/12/2025</time></p>
-                </header>
-            </article>
+            </section>
 
-        </section>
+            <!-- Publicidad derecha -->
+            <aside class="ads-right" aria-label="Publicidad">
+                <article class="ad-card">
+                    <blockquote>
+                        <img src="./imgs/nestea.jpeg" alt="">
+                        <p>Refresca tu día con Nestea</p>
+                    </blockquote>
+                </article>
 
-    </section>
+                <article class="ad-card">
+                    <blockquote>
+                        <img src="./imgs/taza-nescafe-publicidad.jpg" alt="">
+                        <p>Empieza el día con Nescafé</p>
+                    </blockquote>
+                </article>
+            </aside>
 
-    <!-- Publicidad derecha -->
-    <aside class="ads-right" aria-label="Publicidad">
-        <article class="ad-card">
-            <blockquote>
-                <img src="./imgs/nestea.jpeg" alt="">
-                <p>Refresca tu día con Nestea</p>
-            </blockquote>
-        </article>
+        </main>
 
-        <article class="ad-card">
-            <blockquote>
-                <img src="./imgs/taza-nescafe-publicidad.jpg" alt="">
-                <p>Empieza el día con Nescafé</p>
-            </blockquote>
-        </article>
+        <a href="formulario/formulario.html" class="boton-ir-formulario">Ir al formulario</a>
 
-    </aside>
+        <footer class="site-footer">
+            <p>&copy; 2025 El Rincón Madridista. Blog independiente no oficial sobre el Real Madrid. Noticias, análisis y opinión madridista. Todos los derechos reservados.</p>
+        </footer>
 
-</main>
-
-<footer class="site-footer">
-    <p>&copy; 2025 El Rincón Madridista</p>
-</footer>
-
-</body>
+    </body>
 </html>

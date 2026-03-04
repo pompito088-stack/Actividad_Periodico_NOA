@@ -9,19 +9,24 @@
 <body>
     <form class="form-tipos-inputs">
         <h1 class="title">Dejanos tu opinión</h1>
-        <!-- Ejemplo representativo para cada tipo de input -->
         <div class="input-demo">
             <label for="text">Nombre completo</label>
-            <input type="text" id="text" name="text" placeholder="Ej: Juan Pérez">            
+            <input type="text" id="text" name="text" placeholder="Ej: Federico Valverde"  minlength="3" required>            
         </div>
         <div class="input-demo">
             <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            <input type="email" id="email" name="email" placeholder="madridista@gmail.com" required>
             
         </div>
         <div class="input-demo">
             <label for="password">Contraseña de acceso</label>
-            <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres">
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Mínimo 8 caracteres"                
+                minlength="8"
+                required>            
         </div>               
         
         <div class="input-demo">
@@ -89,28 +94,43 @@
             <label for="textarea">Comentarios</label>
             <textarea id="textarea" name="textarea" placeholder="Escribe tus comentarios aquí..."></textarea>           
         </div>
-        <input type="submit" value="Enviar">
+        <button type="submit" class="button button--blue">
+            <span class="button__text">Enviar</span>
+            <span class="button__icon">
+                <svg class="svg" viewBox="0 0 24 24">
+                    <path fill="white" d="M2 21l21-9L2 3v7l15 2-15 2z"/>
+                </svg>
+            </span>
+        </button>
 
-<button type="reset" class="button">
-    <span class="button__text">Eliminar</span>
-    <span class="button__icon">
-        <svg class="svg" viewBox="0 0 512 512">
-                <path d="M112,112l20,320c.95,18.49,14.4,32,32,32H348c17.67,0,30.87-13.51,32-32l20-320" 
-                fill="none" stroke="#fff" stroke-width="32"></path>
+        <button type="reset" class="button button--red">
+            <span class="button__text">Eliminar</span>
+            <span class="button__icon">
+                <svg class="svg" viewBox="0 0 512 512">
+                    <path d="M112,112l20,320c.95,18.49,14.4,32,32,32H348c17.67,0,30.87-13.51,32-32l20-320" 
+                    fill="none" stroke="#fff" stroke-width="32"></path>
 
-                <line x1="80" x2="432" y1="112" y2="112" 
-                stroke="#fff" stroke-width="32"></line>
+                    <line x1="80" x2="432" y1="112" y2="112" 
+                    stroke="#fff" stroke-width="32"></line>
 
-                <path d="M192,112V72a24,24,0,0,1,24-24h80a24,24,0,0,1,24,24v40" 
-                fill="none" stroke="#fff" stroke-width="32"></path>
+                    <path d="M192,112V72a24,24,0,0,1,24-24h80a24,24,0,0,1,24,24v40" 
+                    fill="none" stroke="#fff" stroke-width="32"></path>
 
-                <line x1="256" y1="176" x2="256" y2="400" stroke="#fff" stroke-width="32"></line>
-                <line x1="184" y1="176" x2="192" y2="400" stroke="#fff" stroke-width="32"></line>
-                <line x1="328" y1="176" x2="320" y2="400" stroke="#fff" stroke-width="32"></line>
-            </svg>
-    </span>
-</button>
+                    <line x1="256" y1="176" x2="256" y2="400" stroke="#fff" stroke-width="32"></line>
+                    <line x1="184" y1="176" x2="192" y2="400" stroke="#fff" stroke-width="32"></line>
+                    <line x1="328" y1="176" x2="320" y2="400" stroke="#fff" stroke-width="32"></line>
+                </svg>
+            </span>
+        </button>
 
-<a href="../index.html" class="volver">Volver al inicio</a>
+        <a href="../index.html" class="button button--gray">
+            <span class="button__text">Volver</span>
+            <span class="button__icon">
+                <svg class="svg" viewBox="0 0 24 24">
+                    <path fill="white" d="M15 18l-6-6 6-6"/>
+                </svg>
+            </span>
+        </a>
+    </form>
 </body>
 </html>
